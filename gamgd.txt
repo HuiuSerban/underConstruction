@@ -1,0 +1,30 @@
+<style>
+      #map_canvas {
+	  position:fixed;
+	  left:100px;
+	  top:150px;
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+	
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+          center: new google.maps.LatLng(44.435589, 26.100908),
+          zoom: 17,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	
+  </head>
+  <body>
+    <div id="map_canvas" style="float:left;"></div>
+	<p>PA SISTEMUL LU FANEL DE LA LEORDENI SI GICU PITICU</p>
+  </body>
+  
